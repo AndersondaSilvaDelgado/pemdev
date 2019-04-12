@@ -27,8 +27,6 @@ class ColabDAO extends Conn {
                     . " , F.NOME AS \"nomeColab\" "
                 . " FROM "
                     . " USINAS.VMB_FUNC_AUTO F "
-                . " WHERE "
-                    . " F.FUNC_ID = E.FUNC_ID "
                 . " ORDER BY "
                     . " F.CD "
                 . " ASC ";

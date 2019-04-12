@@ -7,11 +7,11 @@
  */
 require_once 'Conn.class.php';
 /**
- * Description of REquipProd
+ * Description of Prod
  *
  * @author anderson
  */
-class REquipProd extends Conn {
+class ProdDAO extends Conn {
     //put your code here
     
     /** @var PDOStatement */
@@ -23,10 +23,14 @@ class REquipProd extends Conn {
     public function dados() {
 
         $select = " SELECT " 
-                . " EQUIP_ID AS \"idEquip\" "
-                . " , PROD_ID AS \"idProd\" "
+                . " PROD_ID AS \"idProd\" "
+                . " , CD AS \"codProd\" "
+                . " , DESCR AS \"descrProd\" "
                 . " FROM "
-                . " USINAS.VMB_EQUIP_PROD ";
+                . " USINAS.VMB_PROD_MANUT"
+                . " ORDER BY "
+                . " PROD_ID "
+                . " ASC ";
 
         $this->Conn = parent::getConn();
         $this->Read = $this->Conn->prepare($select);
