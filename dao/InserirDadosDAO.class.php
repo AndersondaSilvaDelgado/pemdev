@@ -30,7 +30,7 @@ class InserirDadosDAO extends Conn {
                 . " ) "
                 . " VALUES ("
                 . " SYSDATE "
-                . " , 'PBM' "
+                . " , 'PEM' "
                 . " , ?"
                 . " , ?"
                 . " )";

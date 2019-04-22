@@ -28,12 +28,12 @@ class AtualizaAplicDAO extends Conn {
             $va = $d->versaoAtual;
         }
 
-        $retorno = 'NAO=2_';
+        $retorno = 'NAO';
 
         $select = "SELECT "
                 . " COUNT(*) AS QTDE "
                 . " FROM "
-                . " PBM_ATUALIZACAO "
+                . " PEM_ATUALIZACAO "
                 . " WHERE "
                 . " EQUIP_ID = " . $equip;
 
@@ -49,7 +49,7 @@ class AtualizaAplicDAO extends Conn {
 
         if ($v == 0) {
 
-            $sql = "INSERT INTO PBM_ATUALIZACAO ("
+            $sql = "INSERT INTO PEM_ATUALIZACAO ("
                     . " EQUIP_ID "
                     . " , VERSAO_ATUAL "
                     . " , VERSAO_NOVA "
@@ -87,7 +87,7 @@ class AtualizaAplicDAO extends Conn {
 
             if ($va != $vab) {
 
-                $sql = "UPDATE PBM_ATUALIZACAO "
+                $sql = "UPDATE PEM_ATUALIZACAO "
                         . " SET "
                         . " VERSAO_ATUAL = TRIM(TO_CHAR(" . $va . ", '99999999D99'))"
                         . " , VERSAO_NOVA = TRIM(TO_CHAR(" . $va . ", '99999999D99'))"
@@ -108,7 +108,7 @@ class AtualizaAplicDAO extends Conn {
 
                     if (strcmp($va, $vab) <> 0) {
 
-                        $sql = "UPDATE PBM_ATUALIZACAO "
+                        $sql = "UPDATE PEM_ATUALIZACAO "
                                 . " SET "
                                 . " VERSAO_ATUAL = TRIM(TO_CHAR(" . $va . ", '99999999D99'))"
                                 . " , DTHR_ULT_ATUAL = SYSDATE "

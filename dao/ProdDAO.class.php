@@ -25,7 +25,7 @@ class ProdDAO extends Conn {
         $select = " SELECT " 
                 . " PROD_ID AS \"idProd\" "
                 . " , CD AS \"codProd\" "
-                . " , DESCR AS \"descrProd\" "
+                . " , CARACTER(DESCR) AS \"descrProd\" "
                 . " FROM "
                 . " USINAS.VMB_PROD_MANUT"
                 . " ORDER BY "
