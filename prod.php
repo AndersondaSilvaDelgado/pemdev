@@ -1,11 +1,7 @@
 <?php
 
-require('./dao/ProdDAO.class.php');
+require('./control/ProdCTR.class.php');
 
-$prodDAO = new ProdDAO();
+$prodCTR = new ProdCTR();
 
-$dados = array("dados"=>$prodDAO->dados());
-
-$json_str = json_encode($dados);
-
-echo $json_str;
+echo $prodCTR->dados();

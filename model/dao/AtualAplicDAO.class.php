@@ -12,7 +12,7 @@ require_once 'Conn.class.php';
  *
  * @author anderson
  */
-class AtualizaAplicDAO extends Conn {
+class AtualAplicDAO extends Conn {
 
     /** @var PDOStatement */
     private $Read;
@@ -20,7 +20,7 @@ class AtualizaAplicDAO extends Conn {
     /** @var PDO */
     private $Conn;
 
-    public function pesqInfo($dados) {
+    public function verAtualAplic($dados) {
 
         foreach ($dados as $d) {
 

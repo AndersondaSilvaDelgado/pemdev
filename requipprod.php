@@ -1,11 +1,7 @@
 <?php
 
-require('./dao/REquipProdDAO.class.php');
+require('./control/REquipProdCTR.class.php');
 
-$rEquipProdDAO = new REquipProdDAO();
+$rEquipProdCTR = new REquipProdCTR();
 
-$dados = array("dados"=>$rEquipProdDAO->dados());
-
-$json_str = json_encode($dados);
-
-echo $json_str;
+echo $rEquipProdCTR->dados();
